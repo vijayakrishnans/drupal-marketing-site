@@ -1,0 +1,18 @@
+packages:
+  - "apps/*"
+  - "packages/*"
+  - "tests/*"
+  - "tooling/*"
+
+# pnpm 10 blocks dependency build scripts unless allow-listed; wrangler's
+# workerd and esbuild need theirs to verify their platform binaries.
+onlyBuiltDependencies:
+  - esbuild
+  - workerd
+  - sharp
+
+# next-drupal 2.0.1 lists `next ^14 || ^15` as a plain dependency, which would
+# install a second Next.js beside the app's 16.3.8 (and bundle it): pin it to
+# the app's.
+overrides:
+  next-drupal>next: 16.3.8

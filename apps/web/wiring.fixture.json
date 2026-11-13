@@ -1,0 +1,11 @@
+{
+  "cloudflare-r2/dev": {
+    "r2_bucket_name": "dev-drupal-marketing-site-dev"
+  },
+  "cloudflare-r2/stage": {
+    "r2_bucket_name": "stg-drupal-marketing-site-stage"
+  },
+  "cloudflare-r2/prod": {
+    "r2_bucket_name": "prod-drupal-marketing-site-prod"
+  }
+}
